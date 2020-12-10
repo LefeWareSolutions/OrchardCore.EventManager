@@ -6,6 +6,7 @@ import interactionPlugin from '@fullcalendar/interaction';
 document.addEventListener('DOMContentLoaded', function () {
     var calendarEl = document.getElementById('calendar');
 
+
     var calendar = new Calendar(calendarEl, {
         plugins: [dayGridPlugin, interactionPlugin],
         themeSystem: 'bootstrap',
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         dayMaxEvents: true, // allow "more" link when too many events
         selectable: true,
+
 
         events: [
             {
