@@ -5,7 +5,7 @@ import CalendarContainer from './components/calendar/CalendarContainer';
 
 const tenantName = "";
 const client = new ApolloClient({
-  uri:  `https://localhost:5001/${tenantName}/api/graphql`,
+  uri:  `https://localhost:44300/${tenantName}/api/graphql`,
   cache: new InMemoryCache()
 });
 
