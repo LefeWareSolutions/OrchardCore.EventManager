@@ -63,7 +63,7 @@ namespace OrchardCore.EventManager
 
         public override void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<INavigationProvider, CalendarAdminMenu>();
+            services.AddScoped<INavigationProvider, EventManagerAdminMenu>();
         }
 
         public override void Configure(IApplicationBuilder app, IEndpointRouteBuilder routes, IServiceProvider serviceProvider)

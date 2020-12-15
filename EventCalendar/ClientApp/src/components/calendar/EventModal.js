@@ -9,9 +9,11 @@ export default function EventModal({show, handleClose, event}) {
         <Modal.Title>{event.title}</Modal.Title>
       </Modal.Header>
 
-      <Modal.Body>
-        <p>Start Date:{event.start?.toString()}</p>
-        <p>End Date:{event.end?.toString()}</p>
+      <Modal.Body style={{display: 'flex', flexDirection: 'column'}}>
+        <img src={event.imageUrl}/><br/>
+        <b>Description: </b>{event.description}<br/>
+        <b>Start Date: </b>{event.start?.toString()}<br/>
+        <b>End Date: </b>{event.end?.toString()}
       </Modal.Body>
 
       <Modal.Footer>

@@ -44,7 +44,9 @@ namespace LefeWareLearning.Events
                 .Creatable()
                 .Listable()
                 .WithPart("TitlePart", part => part.WithPosition("1"))
-                .WithPart("EventPart", part => part.WithPosition("2"))
+                .WithPart("SeasonSelectionPart", part=>part.WithPosition("2"))
+                .WithPart("EventPart", part => part.WithPosition("3"))
+                .WithPart("ContainedPart", part => part.WithPosition("4"))
             );
 
             return 1;

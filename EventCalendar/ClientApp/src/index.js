@@ -4,7 +4,7 @@ import App from './App';
 
 ReactDOM.render(
   <App />, 
-  document.getElementById('calendar2')
+  document.getElementById('calendar')
 );
 
 module.hot.accept();

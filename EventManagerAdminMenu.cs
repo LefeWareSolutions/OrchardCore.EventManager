@@ -6,11 +6,11 @@ using OrchardCore.Navigation;
 
 namespace OrchardCore.Calendar
 {
-    public class CalendarAdminMenu : INavigationProvider
+    public class EventManagerAdminMenu : INavigationProvider
     {
         private readonly IStringLocalizer T;
 
-        public CalendarAdminMenu(IStringLocalizer<CalendarAdminMenu> localizer)
+        public EventManagerAdminMenu(IStringLocalizer<EventManagerAdminMenu> localizer)
         {
             T = localizer;
         }

@@ -15,7 +15,10 @@ export default function Calendar({events}) {
   const handleClose = () => setShow(false);
   
   const handleShow = (event) =>{
-    setEvent(event);
+    const selectedEvent = events.find(x=>x.contentItemId === event.resource)
+    const {description, thumbnail } = selectedEvent.event;
+    const imageUrl = thumbnail.urls[0];
+    setEvent({...event, description, imageUrl});
     setShow(true);
   }
     
@@ -24,7 +27,8 @@ export default function Calendar({events}) {
     return {
       start: moment(x.event.startDate).toDate(),
       end: moment(x.event.endDate).toDate(),
-      title: x.displayText
+      title: x.displayText,
+      resource: x.contentItemId
     }
   });
   return (
@@ -36,7 +40,6 @@ export default function Calendar({events}) {
         defaultView="month"
         events={calendarEvents}
         style={{ height: "100vh" }}
-        onSelectSlot={(slot) => handleShow(slot)}
         onSelectEvent={(slot) => handleShow(slot)}
       />
       <EventModal 

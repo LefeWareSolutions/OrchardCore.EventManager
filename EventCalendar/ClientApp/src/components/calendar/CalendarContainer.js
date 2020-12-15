@@ -7,12 +7,17 @@ import Calendar from './Calendar'
 const GET_EVENTS = gql` 
 query getEvents {
   event {
+    contentItemId
     createdUtc
     displayText
     render
     event {
       startDate
       endDate
+      description
+      thumbnail {
+        urls
+      }
     }
   }
 }
