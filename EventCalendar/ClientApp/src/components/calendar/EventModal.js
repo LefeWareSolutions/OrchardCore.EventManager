@@ -10,10 +10,14 @@ export default function EventModal({show, handleClose, event}) {
       </Modal.Header>
 
       <Modal.Body style={{display: 'flex', flexDirection: 'column'}}>
-        <img src={event.imageUrl}/><br/>
+        <img src={event.imageUrl} style={{maxHeight:300}}/><br/>
+        <div>
+          <b>Start Time: </b>{event.start?.toLocaleString()}<br/>
+        </div>
+        <div>
+          <b>End Time: </b>{event.end?.toLocaleString()}
+        </div>
         <b>Description: </b>{event.description}<br/>
-        <b>Start Date: </b>{event.start?.toString()}<br/>
-        <b>End Date: </b>{event.end?.toString()}
       </Modal.Body>
 
       <Modal.Footer>
@@ -21,7 +25,7 @@ export default function EventModal({show, handleClose, event}) {
           Close
         </Button>
         <Button variant="primary" onClick={handleClose}>
-          Save Changes
+          Ok
         </Button>
       </Modal.Footer>
     </Modal>

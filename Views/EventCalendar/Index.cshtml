@@ -1,4 +1,22 @@
-<h1>@T["Schedule"]</h1>
+@inject OrchardCore.Settings.ISiteService SiteService
+@{
+  var site = await SiteService.GetSiteSettingsAsync();
+  var createEventUrl = $"/{site.SiteName}/Portal/Contents/ContentTypes/Event/Create";
+}
+<div class="row">
+  <div class="col-xl-4 col-sm-6">
+    <h1>@T["Schedule"]</h1>
+  </div>
+  <div class="col-xl-8 col-sm-6 d-flex justify-content-start flex-row-reverse">
+    <div class="form-group">
+      <div class="btn-group">
+             <a class="btn btn-sm btn-success" href="@createEventUrl">New Event</a>
+      </div>
+    </div>
+  </div>
+</div>
+  
 <div id="calendar"></div>
-@*<script src="http://localhost:8080/bundle.js"></script>*@
-<script src="~/OrchardCore.EventManager/Scripts/bundle.js"></script>
+<script src="http://localhost:8080/bundle.js"></script>
+@* <script src="~/OrchardCore.EventManager/Scripts/bundle.js"></script> *@
+
