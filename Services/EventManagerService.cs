@@ -38,9 +38,9 @@ namespace OrchardCore.EventManager.Services
             newEventPart.Apply();
         }
 
-        public async Task<IEnumerable<ContentItem>> GetAllEvents()
+        public Task<IEnumerable<ContentItem>> GetAllEvents()
         {
-            return Enumerable.Empty<ContentItem>();
+            return Task.FromResult<IEnumerable<ContentItem>>(Enumerable.Empty<ContentItem>());
         }
     }
 }
